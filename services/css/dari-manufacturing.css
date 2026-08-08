@@ -1,0 +1,70 @@
+:root{--svc-accent:var(--accent);}
+/* Dari Manufacturing — page-specific styling */
+.svc-hero .svc-num{
+  display:inline-block;background:rgba(255,255,255,.15);color:#fff;
+  padding:.35rem .9rem;border-radius:50px;font-size:.78rem;letter-spacing:.08em;
+  text-transform:uppercase;margin-bottom:.8rem;
+}
+
+.process-list{display:flex;flex-direction:column;gap:1.1rem;max-width:760px;}
+.process-list li{
+  display:flex;align-items:flex-start;gap:1.2rem;
+  background:var(--white);border:1px solid var(--border);
+  padding:1.1rem 1.4rem;border-radius:var(--radius-sm);
+  box-shadow:var(--shadow-sm);
+}
+.process-list .step-num{
+  flex-shrink:0;width:36px;height:36px;border-radius:50%;
+  background:var(--primary);color:#fff;font-weight:700;font-size:.82rem;
+  display:flex;align-items:center;justify-content:center;
+}
+.process-list li strong{color:var(--text);font-weight:500;font-size:.96rem;}
+
+.machines-benefits-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;}
+.plain-list{display:flex;flex-direction:column;gap:.8rem;margin-top:1rem;}
+.plain-list li{
+  display:flex;align-items:center;gap:.7rem;font-size:.95rem;color:var(--text);
+}
+.plain-list li i{color:var(--accent);}
+
+.app-tags{display:flex;flex-wrap:wrap;gap:.8rem;}
+.app-tag{
+  background:var(--white);border:1px solid var(--border);
+  padding:.7rem 1.3rem;border-radius:50px;font-size:.9rem;font-weight:500;
+  color:var(--primary-dark);box-shadow:var(--shadow-sm);
+}
+
+.svc-cta{
+  background:linear-gradient(120deg,var(--primary-dark),var(--primary));
+  color:#fff;border-radius:var(--radius-lg);
+  padding:3rem;display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:1.5rem;
+}
+.svc-cta h3{font-size:1.5rem;margin-bottom:.4rem;}
+.svc-cta p{color:#DCEAE3;}
+
+.svc-nav-section{padding-top:0;}
+.svc-nav{
+  display:flex;align-items:center;justify-content:space-between;
+  border-top:1px solid var(--border);padding-top:2.5rem;gap:1rem;
+}
+.svc-nav-link{
+  display:flex;flex-direction:column;gap:.3rem;max-width:280px;
+  padding:1rem 1.3rem;border-radius:var(--radius-sm);
+  border:1px solid var(--border);transition:all var(--speed);
+}
+.svc-nav-link:hover{border-color:var(--accent);transform:translateY(-3px);}
+.svc-nav-link span{font-size:.78rem;color:var(--text-muted);}
+.svc-nav-link strong{color:var(--primary-dark);font-size:.95rem;}
+.svc-nav-link.next{text-align:right;align-items:flex-end;margin-left:auto;}
+.svc-nav-all{
+  width:46px;height:46px;border-radius:50%;background:var(--primary);color:#fff;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+
+@media (max-width:992px){.machines-benefits-grid{grid-template-columns:1fr;gap:1.5rem;}}
+@media (max-width:576px){
+  .svc-nav{flex-direction:column;}
+  .svc-nav-link.next{align-items:flex-start;text-align:left;margin-left:0;}
+  .svc-cta{flex-direction:column;align-items:flex-start;}
+}
