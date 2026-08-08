@@ -271,9 +271,9 @@ if (contactForm) {
       body: JSON.stringify(formData)
     })
     .then(response => {
-       alert('Success! Message Google Sheet me save ho gaya.');
+       alert('Success! Your message has been saved.');
        contactForm.reset();
     })
-    .catch(error => alert('Error! Data save nahi ho paya: ' + error.message));
+    .catch(error => alert('Error! Submission failed: ' + error.message));
   });
 }
